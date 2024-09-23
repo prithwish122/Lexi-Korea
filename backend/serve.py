@@ -28,7 +28,7 @@ def gen_chat():
     if data:
         prompt = data.get('prompt', 'Guest')
         bible_ans = stream_chat_response(prompt)
-        return jsonify(ans=f"father says{bible_ans}")
+        return jsonify(ans=f"{bible_ans}")
         # Using Response with a generator to stream data
         # return Response(stream_chat_response(prompt), content_type='text/event-stream')
     else:
